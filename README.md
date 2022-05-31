@@ -21,7 +21,9 @@ Git commits are a perfect place to store microblog entries:
 
 - **Extra metadata is appended to the end of commit message**
 
-  `Key: Value` pairs are used similar to `Signed-off-by:` fields.
+  `Key: Value` pairs are used similar to `Signed-off-by:` fields. To avoid
+  confusion and simplify parsing metadata should appear only in the last lines
+  of commit message and all keys should start with `Microblog-`
 
 
 ## License and copyright
