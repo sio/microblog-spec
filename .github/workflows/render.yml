@@ -1,0 +1,20 @@
+name: render demo
+
+on:
+  push:
+    branches:
+      - sample
+
+jobs:
+  render:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+        with:
+          fetch-depth: 0  # do not truncate git history
+      - run: make
+      - uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: html
+          publish_branch: sample-render
