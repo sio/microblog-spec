@@ -1,6 +1,0 @@
-[microblog]
-title = Sample Microblog
-
-[default]
-author = Vitaly Potyarkin
-markup = markdown

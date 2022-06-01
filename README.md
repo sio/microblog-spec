@@ -17,7 +17,9 @@ Git commits are a perfect place to store microblog entries:
 - **Rendering settings are stored in microblog.toml file in repository**
 
   This file will provide information on how to render the blog: default
-  markup engine, main author, etc. See [example](./microblog.toml)
+  markup engine, main author, etc. See [example][microblog.toml]
+
+[microblog.toml]: https://github.com/sio/microblog-python/blob/master/microblog.toml.example
 
 - **Extra metadata is appended to the end of commit message**
 
