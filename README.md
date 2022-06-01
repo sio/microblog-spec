@@ -26,6 +26,18 @@ Git commits are a perfect place to store microblog entries:
   of commit message and all keys should start with `Microblog-`
 
 
+## Examples
+
+- Sample blog: [read from the bottom up][sample-render], [git history][sample],
+  [git repo][sample-repo]
+- Rendered with: [microblog-python]
+
+[sample-render]: https://sio.github.io/microblog-spec/#4d48088968fbbe4157baf44380b4ce1d5c03fcc6
+[sample]: https://github.com/sio/microblog-spec/commits/sample
+[sample-repo]: https://github.com/sio/microblog-spec/tree/sample
+[microblog-python]: https://github.com/sio/microblog-python
+
+
 ## License and copyright
 
 To the extent possible under law, the contributors of this repository waived
