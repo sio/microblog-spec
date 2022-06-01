@@ -1,0 +1,114 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Sample Microblog</title>
+  <meta charset='utf-8'>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <style>
+    body {
+      max-width: 30em;
+      margin: 0 auto 90vh auto!important;
+      padding: 0 2px;
+    }
+    footer {
+      text-align: right;
+    }
+    footer a {
+      color: gray;
+      text-decoration: none;
+    }
+    article:target {
+      background-color: #ffffe0;
+    }
+    article {
+      margin: 0 auto 1em auto;
+      padding: 0.5em;
+      border: solid;
+      border-radius: 1em;
+      border-color: rgba(100, 100, 100, .35);
+      border-width: 1px;
+    }
+  </style>
+</head>
+<body>
+  <h1>Sample Microblog</h1>
+  
+<article id="f1b169d80a8c320c6fb45ba3a74eb7db226fa72d">
+<p>See git history for this microblog at <a href="https://github.com/sio/microblog-spec/commits/sample">https://github.com/sio/microblog-spec/commits/sample</a></p>
+<footer title="f1b169d80a8c320c6fb45ba3a74eb7db226fa72d">
+<a href="#f1b169d80a8c320c6fb45ba3a74eb7db226fa72d">by Vitaly Potyarkin on 2022-06-01 15:51:32+03:00</a></footer>
+</article>
+
+
+<article id="3bcdbdba8517e10955de205f3dfa4f9806641cba">
+<h1>Rewriting history</h1>
+<p>Editing microblog entries after posting is possible, but it will incur the
+same consequences as rewriting git history in general: it's fine to do
+while you're in private, but should be avoided after publishing.</p>
+<p>I think such approach works well for microblogs too: people should know
+that the tweet they are replying to was not edited after they've read it.
+With non-micro blogs fixing typos and rewording would make git a bad
+storage medium, yet for microblogs I think it's perfect</p>
+<footer title="3bcdbdba8517e10955de205f3dfa4f9806641cba">
+<a href="#3bcdbdba8517e10955de205f3dfa4f9806641cba">by Vitaly Potyarkin on 2022-06-01 15:49:05+03:00</a></footer>
+</article>
+
+
+<article id="dafd0c8b32e0f817027c7e07911653b66bcf1877">
+<p>Speaking of metadata fields: any number of lines starting with
+<code>Microblog-</code> placed at the bottom of commit message will be treated as
+metadata for renderer.</p>
+<p>This commit message contains some metadata that will be parsed, but is
+otherwise meaningless to our renderer.</p>
+<footer title="dafd0c8b32e0f817027c7e07911653b66bcf1877">
+<a href="#dafd0c8b32e0f817027c7e07911653b66bcf1877">by Vitaly Potyarkin on 2022-06-01 15:49:05+03:00</a></footer>
+</article>
+
+
+<article id="cca4fb7a1c564d96a19afce1955fdc4a7b196a82">
+<h1>Multiple markup languages are supported</h1>
+<p>Currently only &#x27;markdown&#x27; and &#x27;plaintext&#x27; are implemented but anything
+else may be added in future.</p>
+<p>Default markup is defined in microblog.toml (`default.markup`) and can be
+overriden by adding a metadata field to commit message. For example, this
+entry will be rendered as plain text even though there are markdown
+elements (see Microblog-Markup field below)</p>
+<p>Currently there are also &#x27;lowercase&#x27; and &#x27;uppercase&#x27; dummy renderers, but
+I doubt anyone will actually be using those :)</p>
+<footer title="cca4fb7a1c564d96a19afce1955fdc4a7b196a82">
+<a href="#cca4fb7a1c564d96a19afce1955fdc4a7b196a82">by Vitaly Potyarkin on 2022-06-01 15:48:25+03:00</a></footer>
+</article>
+
+
+<article id="d154f6a05cfbf6f419aff19bada4bbb9cdbc5305">
+<p>That's why we have <code>default.drop_header</code> in our microblog.toml! Headers
+that match this regex will be silently omitted when rendering your
+microblog</p>
+<footer title="d154f6a05cfbf6f419aff19bada4bbb9cdbc5305">
+<a href="#d154f6a05cfbf6f419aff19bada4bbb9cdbc5305">by Vitaly Potyarkin on 2022-06-01 14:38:10+03:00</a></footer>
+</article>
+
+
+<article id="0cf83fee6997745cae5dee2f2970dcd251116c5f">
+<p>There is no limit on line length or the number of lines in git commit
+messages, but your text editor will probably become upset if you write
+your message like me here: <a href="https://github.com/sio/microblog-spec/raw/sample/text-editor-upset.png">https://github.com/sio/microblog-spec/raw/sample/text-editor-upset.png</a></p>
+<footer title="0cf83fee6997745cae5dee2f2970dcd251116c5f">
+<a href="#0cf83fee6997745cae5dee2f2970dcd251116c5f">by Vitaly Potyarkin on 2022-06-01 14:32:19+03:00</a></footer>
+</article>
+
+
+<article id="4d48088968fbbe4157baf44380b4ce1d5c03fcc6">
+<h1>First microblog post!</h1>
+<p>This microblog will use empty git commits to store posts. A lot of tooling
+already exists around git, and git is very good at keeping records for a
+long time - this makes it perfect for a hacky microblog!</p>
+<p>Very few conventions are required to maintain such blog: <a href="https://github.com/sio/microblog-spec">https://github.com/sio/microblog-spec</a></p>
+<footer title="4d48088968fbbe4157baf44380b4ce1d5c03fcc6">
+<a href="#4d48088968fbbe4157baf44380b4ce1d5c03fcc6">by Vitaly Potyarkin on 2022-06-01 14:25:21+03:00</a></footer>
+</article>
+
+</body>
+</html>
+
