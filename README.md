@@ -1,3 +1,13 @@
+# NOTICE: UNMAINTAINED
+
+This project is not maintained anymore.
+
+Author explored the idea of storing microblog entries in git history and while
+the idea still seems interesting, author has moved on and is not pursuing this
+any further.
+
+---
+
 # Microblogging via git commit messages
 
 Git commits are a perfect place to store microblog entries:
